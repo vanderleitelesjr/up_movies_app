@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "850661147774",
+    "firebase_url": "https://up-movies-app.firebaseio.com",
+    "project_id": "up-movies-app",
+    "storage_bucket": "up-movies-app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:850661147774:android:214aa4e946798267",
+        "android_client_info": {
+          "package_name": "com.up.vanderlei.up_movies_app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "850661147774-s47bdctfdr2jmhnvrbaql1irem0eh8ge.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyC2n2Zig5vzklj15Dd8UgoJHLhvjQhWK3w"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "850661147774-s47bdctfdr2jmhnvrbaql1irem0eh8ge.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
