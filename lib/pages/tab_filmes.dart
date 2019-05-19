@@ -7,30 +7,28 @@ import 'package:up_movies_app/pages/detalhes_page.dart';
 import 'package:up_movies_app/utils/nav.dart';
 
 class TabFilmes extends StatefulWidget {
-  String tipo;
+  bool showFavoritos;
+  String filtro;
 
-  TabFilmes(this.tipo);
+  TabFilmes(this.showFavoritos,this.filtro);
 
   @override
-  _TabFilmesState createState() => _TabFilmesState(tipo);
+  _TabFilmesState createState() => _TabFilmesState(showFavoritos,filtro);
 }
 
 class _TabFilmesState extends State<TabFilmes> {
-  String tipo;
+  bool showFavoritos;
+  String filtro;
 
-  _TabFilmesState(this.tipo);
+  _TabFilmesState(this.showFavoritos,this.filtro);
 
   @override
   Widget build(BuildContext context) {
-    if (tipo == "emAlta"){
-      return _listBuilder(context);
-    }else{
-     return _favListBuilder(context);
-    }
+    return showFavoritos ? _favListBuilder(context,filtro) :  _listBuilder(context,filtro);
   }
 
-  _listBuilder(context) {
-    Future<List<Filme>> filmes = FilmeService.getFilmes();
+  _listBuilder(context,filtro) {
+    Future<List<Filme>> filmes = FilmeService.getFilmes(filtro);
 
     return FutureBuilder<List<Filme>>(
       future: filmes,
@@ -46,7 +44,7 @@ class _TabFilmesState extends State<TabFilmes> {
     );
   }
 
-  _favListBuilder(BuildContext context) {
+  _favListBuilder(context,filtro) {
     final service = FavoritosService();
 
     return StreamBuilder<QuerySnapshot>(
