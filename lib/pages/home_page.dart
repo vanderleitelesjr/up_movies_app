@@ -1,7 +1,7 @@
 
 import 'package:flutter/material.dart';
 import 'package:up_movies_app/drawer_list.dart';
-import 'package:up_movies_app/pages/tab_filmes.dart';
+import 'package:up_movies_app/pages/tab_rotas.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -9,51 +9,25 @@ class HomePage extends StatefulWidget {
 }
 
 class _HomePageState extends State<HomePage> {
-  final filtroController = TextEditingController();
-  String filtro = "";
-
-  @override
-  void initState() {
-    filtroController.addListener((){
-      if(filtroController.text.isEmpty){
-        setState(() {
-          filtro = "";
-        });
-      }else{
-        setState(() {
-          filtro = filtroController.text;
-        });
-      }
-    });
-    super.initState();
-  }
 
   @override
   Widget build(BuildContext context) {
     return
       DefaultTabController(
-        length: 2,
+        length: 1,
         child: Scaffold(
           appBar: AppBar(
-            title: TextField(
-              controller: filtroController,
-              decoration: (InputDecoration(
-                prefixIcon: Icon(Icons.search),
-                hintText: "Pesquisar filmes...",
-              )),
-            ),
+            title: Text("TripToGo"),
             bottom: TabBar(tabs: [
               Tab(
-                text: "Em Alta",
+                text: "Rotas",
               ),
-              Tab(
-                text: "Meus Filmes",
-              )
             ]),
           ),
           body: TabBarView(children: [
-            TabFilmes(false,filtro),
-            TabFilmes(true,filtro),
+            TabRotas(),
+            TabRotas(),
+            TabRotas(),
           ]),
           drawer: DrawerList(),
         ),

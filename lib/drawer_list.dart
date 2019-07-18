@@ -47,9 +47,6 @@ class DrawerList extends StatelessWidget {
             ),
             Column(
               children: <Widget>[
-                _menuItem("Home", Icons.home),
-                _menuItem("Star", Icons.star),
-                _menuItem("Favoritos", Icons.favorite),
                 _menuItem("Logout", Icons.arrow_back,
                     onClick: () => _onClickLogout(context)),
               ],
@@ -68,10 +65,6 @@ class DrawerList extends StatelessWidget {
           icon,
           size: 50,
           color: Colors.red,
-        ),
-        trailing: Icon(
-          Icons.forward,
-          size: 50,
         ),
         title: Text(
           title,

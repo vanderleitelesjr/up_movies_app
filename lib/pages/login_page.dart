@@ -44,7 +44,7 @@ class _LoginPageState extends State<LoginPage> {
     return Scaffold(
       appBar: AppBar(
         title: Text(
-          "Movies",
+          "TripToGo",
         ),
       ),
       body: _body(context),
