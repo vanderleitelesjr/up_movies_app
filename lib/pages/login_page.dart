@@ -17,8 +17,8 @@ class LoginPage extends StatefulWidget {
 
 class _LoginPageState extends State<LoginPage> {
 
-  final _tLogin = TextEditingController(text: "vanderlei@gmail.com");
-  final _tSenha = TextEditingController(text: "123456");
+  final _tLogin = TextEditingController(text: "");
+  final _tSenha = TextEditingController(text: "");
   final FirebaseMessaging _firebaseMessaging = FirebaseMessaging();
 
   @override
