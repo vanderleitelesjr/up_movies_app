@@ -88,13 +88,13 @@ class _LoginPageState extends State<LoginPage> {
               child: Text("Login",style: TextStyle(fontSize: 20, color: Colors.white),),
             ),
           ),
-          Container(
+          /*Container(
             height: 46,
             margin: EdgeInsets.only(top: 20),
             child: GoogleSignInButton(
               onPressed: () {_onClickLogin(context,true);},
             ),
-          ),
+          ),*/
           SizedBox(
             height: 20,
           ),

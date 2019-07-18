@@ -26,8 +26,6 @@ class _HomePageState extends State<HomePage> {
           ),
           body: TabBarView(children: [
             TabRotas(),
-            TabRotas(),
-            TabRotas(),
           ]),
           drawer: DrawerList(),
         ),
