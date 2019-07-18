@@ -1,5 +1,4 @@
 import 'dart:convert';
-import 'package:up_movies_app/domain/filme.dart';
 import 'package:http/http.dart' as http;
 
 import '../rota.dart';
